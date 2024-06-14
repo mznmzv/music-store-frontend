@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Open Sans', sans-serif;
+        @apply bg-blue-200/30;
+    }
+}
+
+.active {
+    @apply text-blue-600;
+}
+
+.rti--container {
+    @apply mt-2 py-1 px-2 w-full rounded-lg border-2 border-gray-200;
+}
+
+.rti--input {
+    @apply w-full;
+}
+
+.rti--container:focus-within {
+    outline: none;
+    --tw-shadow: 0 10px 15px -3px #dbeafe, 0 4px 6px -4px#dbeafe;
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+        0 4px 6px -4px #dbeafe;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    @apply rounded-lg border-2 outline-none placeholder:text-gray-500 focus:shadow-lg focus:shadow-blue-100 focus:border-blue-200 transition-colors duration-300;
+    @apply border-blue-200;
+}
+
+.Toastify__toast-body {
+    @apply text-lg;
+}
