@@ -65,7 +65,7 @@ export const Navbar = () => {
                             </NavLink>
                         </div>
                         <div
-                            className={`rounded-2xl md:flex fixed inset-0 sm:-inset-full md:top-0 md:bottom-0 md:left-2/3 bg-white duration-300 transform ${
+                            className={`rounded-2xl md:flex fixed inset-0 sm:-inset-full md:top-0 md:bottom-0 md:left-2/3 z-20 bg-white duration-300 transform ${
                                 isOpen ? 'translate-x-0' : 'translate-x-full'
                             }`}
                         >
