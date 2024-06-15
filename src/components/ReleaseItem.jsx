@@ -2,12 +2,11 @@ export const ReleaseItem = ({ release }) => {
     const isOrdered = release.buyer !== ''
     const onSell = release.price !== ''
     const isMarket = window.location.pathname === '/market'
-
     return (
         <div className='mx-auto h-full'>
             <div className='bg-white shadow-lg p-5 flex flex-col rounded-xl h-full justify-between hover:scale-105 transition-transform duration-300'>
                 <img
-                    src={`http://localhost:5000/${release.cover}`}
+                    src={`${import.meta.env.VITE_API_URL.replace('/api', '')}/${release.cover}`}
                     alt='cover'
                 />
                 <div className='space-y-2 mt-3 text-sm'>

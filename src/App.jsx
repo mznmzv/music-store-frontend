@@ -34,28 +34,14 @@ function App() {
         <Layout>
             <Routes>
                 <Route path='/' element={<MainPage />} />
-                <Route
-                    path='login'
-                    element={isAuth ? <Navigate to='/' /> : <LoginPage />}
-                />
-                <Route
-                    path='register'
-                    element={isAuth ? <Navigate to='/' /> : <RegisterPage />}
-                />
+                <Route path='login' element={!isAuth && <LoginPage />} />
+                <Route path='register' element={!isAuth && <RegisterPage />} />
                 <Route
                     path='collection'
-                    element={
-                        isAuth ? <CollectionPage /> : <Navigate to='/login' />
-                    }
+                    element={isAuth && <CollectionPage />}
                 />
-                <Route
-                    path='market'
-                    element={isAuth ? <MarketPage /> : <Navigate to='/login' />}
-                />
-                <Route
-                    path='deals'
-                    element={isAuth ? <DealsPage /> : <Navigate to='/login' />}
-                />
+                <Route path='market' element={isAuth && <MarketPage />} />
+                <Route path='deals' element={isAuth && <DealsPage />} />
             </Routes>
             <ToastContainer position='bottom-right' />
         </Layout>
