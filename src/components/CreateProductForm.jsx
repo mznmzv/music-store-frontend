@@ -27,7 +27,10 @@ export const CreateProductForm = ({ product, handleClose }) => {
         <div className='flex flex-col px-4 gap-2 py-5'>
             <img
                 className='pt-4'
-                src={`http://localhost:5000/${product.cover}`}
+                src={`${import.meta.env.VITE_API_URL.replace(
+                    '/api',
+                    ''
+                )}/uploads/${product.cover}`}
                 alt='cover'
             />
             <div className='space-y-1 mt-4 mb-2'>

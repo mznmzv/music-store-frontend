@@ -6,7 +6,7 @@ export const ReleaseItem = ({ release }) => {
         <div className='mx-auto h-full'>
             <div className='bg-white shadow-lg p-5 flex flex-col rounded-xl h-full justify-between hover:scale-105 transition-transform duration-300'>
                 <img
-                    src={`${import.meta.env.VITE_API_URL.replace('/api', '')}/${release.cover}`}
+                    src={`${import.meta.env.VITE_API_URL.replace('/api', '')}/uploads/${release.cover}`}
                     alt='cover'
                 />
                 <div className='space-y-2 mt-3 text-sm'>
