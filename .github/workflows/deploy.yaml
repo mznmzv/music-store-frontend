@@ -1,9 +1,16 @@
 name: deploy frontend
-on: [push]
-jobs:
+on: 
+  workflow_dispatch:
+    inputs:
+      deploy:
+        type: boolean
+        default: false
+        description: загрузить изменения на сайт
 
+jobs:
   build:
-    name: Build
+    name: deploy
+    if: github.event.inputs.deploy == 'true'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
