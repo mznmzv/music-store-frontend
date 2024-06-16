@@ -12,7 +12,7 @@ export const RegisterPage = () => {
     const [adress, setAdress] = useState('')
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const { user, status, regOk } = useSelector(state => state.auth)
+    const { status, regOk } = useSelector(state => state.auth)
 
     useEffect(() => {
         if (regOk) {

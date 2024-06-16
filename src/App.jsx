@@ -34,7 +34,7 @@ function App() {
         <Layout>
             <Routes>
                 <Route path='/' element={<MainPage />} />
-                <Route path='login' element={!isAuth && <LoginPage />} />
+                <Route path='login' element={<LoginPage />} />
                 <Route path='register' element={!isAuth && <RegisterPage />} />
                 <Route
                     path='collection'

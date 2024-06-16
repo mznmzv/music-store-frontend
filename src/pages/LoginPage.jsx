@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { checkAuth, login, resetStatus } from '../store/features/authSlice'
+import { checkAuth, login } from '../store/features/authSlice'
 import { toast } from 'react-toastify'
 import { InputField } from '../components/InputField'
 
@@ -10,18 +10,17 @@ export const LoginPage = () => {
     const [password, setPassword] = useState('')
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const { status } = useSelector(state => state.auth)
+    const { status, user } = useSelector(state => state.auth)
     const isAuth = useSelector(checkAuth)
 
     useEffect(() => {
         if (status) {
             toast(status)
-            dispatch(resetStatus())
         }
         if (isAuth) {
-            navigate('/collection')
+            navigate('/')
         }
-    }, [status, isAuth])
+    }, [status, isAuth, navigate])
 
     const handleSubmit = () => {
         try {
@@ -57,8 +56,10 @@ export const LoginPage = () => {
             </div>
             <div className='flex items-center justify-between mt-5'>
                 <button
-                    className='bg-blue-400 p-2 px-4 transition-all duration-[375ms] hover:scale-105 rounded-xl text-white hover:bg-blue-500' 
-                    onClick={handleSubmit}
+                    className='bg-blue-400 p-2 px-4 transition-all duration-[375ms] hover:scale-105 rounded-xl text-white hover:bg-blue-500'
+                    onClick={() => {
+                        handleSubmit()
+                    }}
                 >
                     Войти
                 </button>
