@@ -16,7 +16,7 @@ export const MarketPage = () => {
 
     useEffect(() => {
         dispatch(getMarketProducts())
-    }, [dispatch, marketList])
+    }, [dispatch])
 
     const handleModal = (type, release = null) => {
         dispatch(setModalType(type))
