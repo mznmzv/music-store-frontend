@@ -75,6 +75,9 @@ export const Navbar = () => {
                                 </li>
                                 <li className='h-24 md:hidden'>
                                     <NavLink
+                                        onClick={() => {
+                                            setOpen(false)
+                                        }}
                                         to={'/market'}
                                         className='hover:text-blue-600 transition-all duration-[275ms] h-full flex items-center justify-center'
                                     >
@@ -83,6 +86,9 @@ export const Navbar = () => {
                                 </li>
                                 <li className='h-24 md:hidden'>
                                     <NavLink
+                                        onClick={() => {
+                                            setOpen(false)
+                                        }}
                                         to={'/collection'}
                                         className='hover:text-blue-600 transition-all duration-[275ms] h-full flex items-center justify-center'
                                     >
@@ -91,6 +97,9 @@ export const Navbar = () => {
                                 </li>
                                 <li className='h-24 md:hidden'>
                                     <NavLink
+                                        onClick={() => {
+                                            setOpen(false)
+                                        }}
                                         to={'/deals'}
                                         className='hover:text-blue-600 transition-all duration-[275ms] h-full flex items-center justify-center'
                                     >
