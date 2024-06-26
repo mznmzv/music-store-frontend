@@ -54,7 +54,7 @@ export const LoginPage = () => {
                     />
                 </label>
             </div>
-            <div className='flex items-center justify-between mt-5'>
+            <div className='flex items-center gap-6 justify-between mt-5'>
                 <button
                     className='bg-blue-400 p-2 px-4 transition-all duration-[375ms] hover:scale-105 rounded-xl text-white hover:bg-blue-500'
                     onClick={() => {
