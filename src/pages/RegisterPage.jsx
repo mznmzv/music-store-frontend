@@ -37,7 +37,7 @@ export const RegisterPage = () => {
     return (
         <form
             onSubmit={e => e.preventDefault()}
-            className='m-auto max-w-[400px] border rounded-xl p-7 shadow-lg bg-white text-lg'
+            className='m-auto max-w-[320px] sm:max-w-[400px] border rounded-xl p-7 shadow-lg bg-white text-lg'
         >
             <h2 className='text-center text-xl'>Регистрация</h2>
             <div className='flex gap-2 mt-4'>
@@ -76,7 +76,7 @@ export const RegisterPage = () => {
                     />
                 </label>
             </div>
-            <div className='flex gap-7 items-center justify-between mt-5'>
+            <div className='flex flex-col sm:flex-row gap-3 sm:gap-7 items-center justify-between mt-8'>
                 <button
                     className='bg-blue-400 p-2 px-3 transition-all duration-[375ms] hover:scale-105 rounded-xl text-white hover:bg-blue-500'
                     onClick={handleSubmit}
